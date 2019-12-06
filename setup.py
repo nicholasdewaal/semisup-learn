@@ -8,18 +8,18 @@ except ImportError:
 
 requirements = [
     "sklearn",
-    "scipy",
-    "numpy",
-    "matplotlib"
+    "scipy>=1.3.2",
+    "numpy>=1.16.3",
+    "nlopt>=1.17.2"
 ]
 
 test_requirements = []
 
 setup(
     name='semisup_learn',
-    version='0.0.1',
+    version='0.0.2',
     description="Semisupervised Learning Framework",
-    url='https://github.com/tmadl/semisup-learn',
+    url='https://github.com/nicholasdewaal/semisup-learn',
     packages=[
         'methods', 'frameworks'
     ],
@@ -27,4 +27,5 @@ setup(
     install_requires=requirements,
     zip_safe=False,
     keywords='semisup-learn',
+    python_requires='>=3.6',
 )

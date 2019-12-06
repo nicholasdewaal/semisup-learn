@@ -45,6 +45,13 @@ Usage example:
 
 ```python
 # load `Lung cancer' dataset from mldata.org
+
+import numpy as np
+from frameworks.CPLELearning import CPLELearningModel
+from sklearn.datasets.mldata import fetch_mldata
+from sklearn.linear_model.stochastic_gradient import SGDClassifier
+from frameworks.SelfLearning import SelfLearningModel
+
 cancer = fetch_mldata("Lung cancer (Ontario)")
 X = cancer.target.T
 ytrue = np.copy(cancer.data).flatten()
